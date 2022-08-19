@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+}
+svg{
+ border: 2px solid rgb(21, 227, 227);   
+}
+div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color:brown;
+    border: 2px solid black;
+}
