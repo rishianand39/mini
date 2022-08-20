@@ -28,11 +28,13 @@ const Gif = () => {
   const [userEnteredData, setUserEnteredData] = useState({
     text: "",
     gif: "",
+    time:new Date().toDateString()
   });
   const [posts, setPosts] = useState([
     {
-      text: "Hi family",
-      gif: "https://media2.giphy.com/media/noyBeNjH4nbtXV5ZLA/giphy.gif?cid=f23b8b95emqezfprxqoo2mmmeea7k0onp6b08pvgeviyb3d7&rid=giphy.gif&ct=g",
+      text: "Oh no no no...😂😂",
+      gif: "https://media2.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=f23b8b95tdvgs9etn2dcf3q9690q2wqit9p9tpdwmn00pnp7&rid=giphy.gif&ct=g",
+      time:"Sat Aug 3 2022 "
     },
  
   ]);
@@ -68,7 +70,7 @@ const Gif = () => {
           </Button>
         </Flex>
         <Flex margin={5} alignItems={"center"}>
-          <Avatar src="https://bit.ly/broken-link" marginEnd={2} />
+          <Avatar  src="https://bit.ly/dan-abramov" marginEnd={2} />
           <Textarea
             bg={"white"}
             onChange={(e) =>
@@ -210,7 +212,7 @@ const Post = (props) => {
         <Box>...</Box>
       </Flex>
       <Box>{props.text}</Box>
-      <Box maxH={"300px"}>
+      <Box maxH={"300px"} overflow="hidden">
         {props.gif && <Image src={props.gif} alt="Dan Abramov" />}
       </Box>
     </Container>
