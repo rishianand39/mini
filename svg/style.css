@@ -2,7 +2,8 @@ body{
     margin: 0;
 }
 svg{
- border: 2px solid rgb(21, 227, 227);   
+ border: 2px solid rgb(21, 227, 227); 
+ vertical-align: top;  
 }
 div{
     display: inline-block;
