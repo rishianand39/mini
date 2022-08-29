@@ -22,17 +22,36 @@ router.get("/single", verifyToken, async (req, res) => {
 
 // get all users
 router.get("/all", async (req, res) => {
-  const { first_name, email, mobile, status, role } = req.query;
+  let query = [];
+  for (let key in req.query) {
+    if (key !== "limit" && key!=="page") {
+      let tem = {
+        [key]: req.query[key],
+      };
+      query.push(tem);
+    }
+  }
   try {
-    const user = await User.find({
-      $or: [
-        { first_name: first_name },
-        { email: email },
-        { mobile: mobile },
-        { status: status },
-        { role: role },
-      ],
-    });
+
+    let user;
+    const page=req.query.page || 1;
+    const limit=req.query.limit || 10;
+    const skip=(page-1)*limit;
+    if (query.length !== 0) {
+      user = await User.find({
+        $and: query,
+      })
+        .limit(limit)
+        .skip(skip)
+        .lean()
+        .exec();
+    } else {
+      user = await User.find()
+        .limit(limit)
+        .skip(skip)
+        .lean()
+        .exec();
+    }
 
     return res.status(200).json(user);
   } catch (error) {
