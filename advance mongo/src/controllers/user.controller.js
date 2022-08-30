@@ -24,7 +24,7 @@ router.get("/single", verifyToken, async (req, res) => {
 router.get("/all", async (req, res) => {
   let query = [];
   for (let key in req.query) {
-    if (key !== "limit" && key!=="page") {
+    if (key !== "limit" && key !== "page") {
       let tem = {
         [key]: req.query[key],
       };
@@ -32,28 +32,27 @@ router.get("/all", async (req, res) => {
     }
   }
   try {
-
-    let user;
-    const page=req.query.page || 1;
-    const limit=req.query.limit || 10;
-    const skip=(page-1)*limit;
+    let users;
+    const page = req.query.page || 1;
+    const limit = req.query.limit || 10;
+    const skip = (page - 1) * limit;
     if (query.length !== 0) {
-      user = await User.find({
+      users = await User.find({
         $and: query,
       })
         .limit(limit)
         .skip(skip)
         .lean()
         .exec();
+      
     } else {
-      user = await User.find()
-        .limit(limit)
-        .skip(skip)
-        .lean()
-        .exec();
+      users = await User.find().limit(limit).skip(skip).lean().exec();
     }
 
-    return res.status(200).json(user);
+    // TOTAL PAGE
+    let total = Math.ceil((await User.find().countDocuments())/limit);
+
+    return res.status(200).json({total,users});
   } catch (error) {
     return res.status(500).json(error);
   }
