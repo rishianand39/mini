@@ -1,6 +1,6 @@
 
 import './App.css';
-import InputBox from './components/InputBox/InputBox';
+import InputBox from './components/inputBox/InputBox';
 import Messages from './Messages/Messages';
 function App() {
   return (

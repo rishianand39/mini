@@ -1,5 +1,4 @@
 .message__container {
-  border: 1px solid black;
 }
 
 /* Top body of each message */
@@ -17,19 +16,20 @@
   text-transform: capitalize;
 }
 
-
 /* center of each message */
 .center {
   color: gray;
   font-size: 1.5rem;
   word-wrap: break-word;
-  padding: 5px 35px;
+  padding: 5px;
+  margin-left: 45px;
 }
 
 /* bottom of each message */
 .bottom {
   display: flex;
-  padding: 5px 30px;
+  padding: 5px;
+  margin-left: 45px;
   align-items: center;
 }
 .bottom > :nth-child(1),
@@ -48,12 +48,21 @@
 }
 
 /* View all Replies */
-.arrowReplies{
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 5px 30px;
-    cursor: pointer;
+.arrowReplies {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 45px;
+  cursor: pointer;
 }
-.arrowReplies>div>:first-child{
-    margin-right: 5px;
+.arrowReplies > :first-child {
+  color: #4188c7;
+}
+.arrowReplies > div > :first-child {
+  margin-right: 5px;
+}
+
+.openReply__box {
+  margin-left: 45px;
+  box-sizing: border-box;
 }

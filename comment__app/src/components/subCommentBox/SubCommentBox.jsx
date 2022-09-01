@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import styles from "./input.module.css";
+import styles from "../inputBox/input.module.css"
 
-const InputBox = () => {
+const SubCommentBox = (props) => {
   const message = useRef();
   // eslint-disable-next-line
   const [commentFocus, setCommentFocus] = useState(false);
@@ -25,24 +25,29 @@ const InputBox = () => {
       setDisableBtn(true);
     }
   };
+
+  const handleSubmit = (event) => { 
+
+  }
   return (
     <div className={styles.commentBox}>
       <form>
         <input
           ref={message}
           type="text"
-          placeholder="Add your comment"
+           placeholder="Add your comment"
           onFocus={handleFocus}
+          autoFocus={props.autoFocus}
           onBlur={handleBurr}
           onKeyUp={handleCommentWrote}
         />
         {showBtn && (
           <div className={styles.btn}>
-            <button disabled={disableBtn}>COMMENT</button>
+            <button disabled={disableBtn} onClick={handleSubmit}>COMMENT</button>
             <button
               onClick={() => {
+                props.handleOpenReply()
                 setShowBtn(false);
-                message.current.value = "";
               }}
             >
               CANCEL
@@ -54,4 +59,4 @@ const InputBox = () => {
   );
 };
 
-export default InputBox;
+export default SubCommentBox;
