@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styles from "./message.module.css";
 import CommentBox from "../commentBox/CommentBox";
 import SubMessage from "../subMessage/SubMessage";
+import axios from "axios";
+import { useEffect } from "react";
 const Message = (props) => {
   const [arrowUp, setArrowUp] = useState(false);
   const [openReply, setOpenReply] = useState(false);
-
+  const [subComments,setSubComments]=useState([])
   const handleArrowUpDown = () => {
     setArrowUp(!arrowUp);
   };
@@ -15,6 +17,19 @@ const Message = (props) => {
   const handleOpenReply = () => {
     setOpenReply(!openReply);
   };
+
+  const fetchReply=async()=>{
+    try {
+      const res=await axios.get(`http://localhost:8080/api/v1/subcomments/${props.id}`)
+      setSubComments(res.data)
+    } catch (error) {
+      console.log(error) 
+    }
+  }
+  useEffect(()=>{
+    fetchReply()
+    // eslint-disable-next-line
+  },[])
   return (
     <>
       <section className={styles.message__container}>
@@ -48,11 +63,14 @@ const Message = (props) => {
             ) : (
               <i className="fa-solid fa-caret-down"></i>
             )}
-            View 4 replies
+            View {subComments.length} replies
           </div>
           {arrowUp && (
           <section>
-            <SubMessage user="Dummy user" message="dummy sub reply" />
+            {subComments.map(subcomment=>{
+             return <SubMessage key={subcomment._id} user={subcomment.user} message={subcomment.message} like={subcomment.like} />
+            
+            })}
           </section>
         )}
         </div>

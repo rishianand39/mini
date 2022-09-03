@@ -19,6 +19,9 @@ const SubCommentSchema=new mongoose.Schema({
         type:Number,
         default:0
     }
+},{
+    timestamps:true,
+    versionKey:false
 })
 
 const SubComment=mongoose.model("SubComment",SubCommentSchema)

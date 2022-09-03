@@ -19,11 +19,11 @@ const SubMessage = (props) => {
           <div className={styles.name}>{props.user}</div>
         </div>
         <div className={styles.center}>
-          <div>{props.message}</div>
+          <p style={{fontWeight:"normal"}}>{props.message}</p>
         </div>
         <div className={styles.bottom}>
           <i className="fa-solid fa-thumbs-up"></i>
-          <span>{props.likes}</span>
+          <span>{props.like}</span>
           <i className="fa-solid fa-thumbs-down"></i>
           <span>{props.dislike}</span>
           {props.editable ? (
