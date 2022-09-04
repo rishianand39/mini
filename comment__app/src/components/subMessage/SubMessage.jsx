@@ -5,7 +5,6 @@ import SubCommentBox from "../subCommentBox/SubCommentBox";
 const SubMessage = (props) => {
   const [openReply, setOpenReply] = useState(false);
 
-
   const handleDelete = () => {};
 
   const handleOpenReply = () => {
@@ -34,7 +33,7 @@ const SubMessage = (props) => {
         </div>
         <div className={styles.openReply__box}>
 
-        {openReply && <SubCommentBox handleOpenReply={handleOpenReply} autoFocus={true}/>}
+        {openReply && <SubCommentBox handleOpenReply={handleOpenReply} commentId={props.commentId} autoFocus={true}/>}
         </div>
        
         

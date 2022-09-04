@@ -5,7 +5,7 @@ const Comment = require("../models/Comment.model");
 router.get("/", async (req, res) => {
 
   try {
-    const comments = await Comment.find();
+    const comments = await Comment.find().sort({createdAt:-1}).limit(10);
     return res.status(200).json(comments);
   } catch (error) {
     return res.status(500).json(error.message);

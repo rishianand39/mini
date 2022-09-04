@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "./input.module.css";
-
+import axios from "axios";
 const InputBox = () => {
   const message = useRef();
   // eslint-disable-next-line
@@ -25,10 +25,17 @@ const InputBox = () => {
       setDisableBtn(true);
     }
   };
+  const handleSubmit = async () => {
+    try {
+      await axios.post(`http://localhost:8080/api/v1/comments/create`, {
+        message: message.current.value,
+        user: "Dummy User",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  const handleSubmit = (event) => {
-
-  }
   return (
     <div className={styles.commentBox}>
       <form>
@@ -42,7 +49,9 @@ const InputBox = () => {
         />
         {showBtn && (
           <div className={styles.btn}>
-            <button disabled={disableBtn} onClick={handleSubmit}>COMMENT</button>
+            <button disabled={disableBtn} onClick={handleSubmit}>
+              COMMENT
+            </button>
             <button
               onClick={() => {
                 setShowBtn(false);

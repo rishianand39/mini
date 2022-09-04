@@ -53,7 +53,7 @@ const Message = (props) => {
         </div>
         <div className={styles.openReply__box}>
           {openReply && (
-            <CommentBox handleOpenReply={handleOpenReply} autoFocus={true} />
+            <CommentBox  commentId={props.id} handleOpenReply={handleOpenReply} autoFocus={true} />
           )}
         </div>
         <div className={styles.arrowReplies}>
@@ -68,7 +68,7 @@ const Message = (props) => {
           {arrowUp && (
           <section>
             {subComments.map(subcomment=>{
-             return <SubMessage key={subcomment._id} user={subcomment.user} message={subcomment.message} like={subcomment.like} />
+             return <SubMessage key={subcomment._id} commentId={subcomment.messageId} user={subcomment.user} message={subcomment.message} like={subcomment.like} />
             
             })}
           </section>
