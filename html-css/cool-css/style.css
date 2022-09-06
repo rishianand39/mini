@@ -1,0 +1,78 @@
+p::selection {
+  background-color: rebeccapurple;
+  color: white;
+}
+#sticky {
+  position: sticky;
+  /* position: -webkit-sticky; */
+  background: #f83d23;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px #000;
+  color: #fff;
+}
+#wrapper {
+  width: 75%;
+  margin: auto;
+  background-color: #ccc;
+}
+#wrapper {
+  height: 900px;
+}
+
+body {
+  font-family: georgia;
+  height: 2000px;
+}
+
+
+/* Animation property */
+button {
+  animation: wiggle 2.5s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+button {
+  height: 4em;
+  width: 7em;
+
+  background: #444;
+  background: linear-gradient(top, #555, #333);
+  border: none;
+  border-top: 3px solid orange;
+  border-radius: 0 0 0.2em 0.2em;
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 1em;
+  transform-origin: 50% 5em;
+}

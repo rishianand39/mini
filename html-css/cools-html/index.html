@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cool things in html</title>
+  </head>
+  <style>
+    summary {
+      cursor: pointer;
+      color: red;
+    }
+    .menu-icon-container {
+      margin-top: 10px;
+      cursor: pointer;
+    }
+   
+    .sidebar{
+        display:inline-block;
+        background-color: cornflowerblue
+        ;
+    }
+  
+    .small-sidebar{
+        display: none;
+    }
+ 
+  </style>
+  <body>
+    <details>
+      <summary>Open Me</summary>
+      <div>
+        <ul>
+          <li>BigBasket</li>
+          <li>Amazon</li>
+          <li>Flipkart</li>
+        </ul>
+      </div>
+    </details>
+    <hr>
+    <div class="menu-icon-container">
+      <img
+        src="https://raw.githubusercontent.com/rishianand39/YouTube/main/YouTube/img/menu.png"
+        alt=""
+        class="menu-icon"
+      />
+      <br>
+        <ul class="sidebar">
+            <li>BigBasket</li>
+            <li>Amazon</li>
+            <li>Flipkart</li>
+          </ul>
+    </div>
+
+
+    <!-- call on click -->
+    <a href="tel:8825203332">call me 882520332</a>
+    <br>
+
+    <!-- progress bar -->
+    <progress value="39" max="100"></progress>
+
+
+
+    <!-- tooltip -->
+    <span title="See, this is the tooltip.">Move your mouse over me!</>
+
+        <!-- emojis -->
+    <p style="font-size:30px ;">
+        &#128512;
+    </p>
+
+
+    <!-- user can edit text -->
+    <div contenteditable="true">
+        User can edit this div
+    </div>
+
+  </body>
+</html>
+<script>
+  let menuIcon = document.querySelector(".menu-icon");
+  let sidebar = document.querySelector(".sidebar");
+  var container = document.querySelector(".container");
+
+  menuIcon.onclick = function () {
+    sidebar.classList.toggle("small-sidebar");
+  };
+</script>
