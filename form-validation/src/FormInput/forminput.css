@@ -15,7 +15,7 @@ input {
   margin: 10px 0px;
     border: 1px solid gray;
 }
-input:focus{
+input{
   outline: none;
 }
 
