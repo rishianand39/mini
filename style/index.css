@@ -1,0 +1,26 @@
+/* ---------css variable--------------- */
+:root {
+  --background: #9c9e9d80;
+  --border: #c50d3b;
+  --border-width: 5px;
+}
+:root {
+  --green: rgb(45, 75, 45);
+}
+
+/* --------------common style---------- */
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* -----------start here----------------- */
+.box {
+  border: var(--border-width) solid var(--border);
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: var(--background);
+}
