@@ -1,26 +1,63 @@
-/* ---------css variable--------------- */
-:root {
-  --background: #9c9e9d80;
-  --border: #c50d3b;
-  --border-width: 5px;
+:root{
+  --first-theme:white;
+  --second-theme:black;
+  --third-theme:rgb(185, 32, 58);
+  --background:var(--third-theme);
+  --color:black;
 }
-:root {
-  --green: rgb(45, 75, 45);
-}
-
-/* --------------common style---------- */
-body {
-  margin: 0;
-}
-* {
+*{
   box-sizing: border-box;
 }
+body{
+  margin: 0;
+  color: var(--color);
+  background-color:var(--background);
+}
 
-/* -----------start here----------------- */
-.box {
-  border: var(--border-width) solid var(--border);
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  background-color: var(--background);
+/* ----------style here-------- */
+.container{
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  border: 1px solid rgb(12, 64, 122);
+  padding: 5px;
+}
+
+h2{
+  font-family: cursive;
+}
+
+.nav{
+  border: 1px solid rgb(17, 19, 128);
+  display: flex;
+  justify-content: space-between;
+}
+.theme{
+  border: 1px solid rgb(8, 38, 136);
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.theme>div:nth-child(1){
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgb(85, 13, 13);
+  border-radius: 50%;
+  background-color: var(--first-theme);
+}
+.theme>div:nth-child(2){
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: var(--second-theme);
+
+}
+.theme>div:nth-child(3){
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: var(--third-theme);
 }
