@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo class</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Navbar -->
+      <div id="nav">
+        <!-- Logo -->
+        <div id="logo_container">
+          <a href="./index.htm">:Empty & :target</a>
+        </div>
+        <!-- Links -->
+        <div class="links_container">
+          <a href="#store">Store and sync</a>
+          <a href="#share">Share</a>
+          <a href="#secure">Stay secure</a>
+        </div>
+      </div>
+      <div class="intro">
+        <h1>CSS Solutions for JS problems</h1>
+        <p>
+          CSS can solve a surpring number of common issues that we run into!
+        </p>
+      </div>
+      <!-- :empty pseudo class -->
+      <div class="empty_pseudo">
+        <h3><code>:empty</code> pseudo class</h3>
+        <div id="form">
+          <p>Please enter your information below</p>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="put your email here" />
+          <br />
+          <span class="error_message"></span>
+          <br />
+          <input type="submit" id="submit" />
+        </div>
+        <div class="images_container">
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-5982_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+          <img
+            src="https://faces-img.xcdn.link/thumb-lorem-face-6214_thumb.jpg"
+            alt=""
+          />
+        </div>
+        <div class="target_pseudo">
+          <h3>Smooth scrolling and<code>:target</code></h3>
+          <div>
+            <div id="store">
+              <img
+                class="icon"
+                src="https://assets.codepen.io/308367/comment.svg"
+              />
+              <h3 class="fs-400 fw-bold">Store and sync</h3>
+              <p>
+                Keep all your files securely stored, up to date, and accessible
+                from any device
+              </p>
+            </div>
+            <div id="share">
+              <img
+                class="icon"
+                src="https://assets.codepen.io/308367/share.svg"
+              />
+              <h3 class="fs-400 fw-bold">Share</h3>
+              <p>
+                Quickly send any file—big or small—to anyone, even if they don't
+                have a Dropbox account.
+              </p>
+            </div>
+            <div id="secure">
+              <img
+                class="icon"
+                src="https://assets.codepen.io/308367/shield.svg"
+              />
+              <h3 class="fs-400 fw-bold">Stay secure</h3>
+              <p>
+                Keep your files private with multiple layers of protection from
+                the service trusted by millions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./index.js"></script>

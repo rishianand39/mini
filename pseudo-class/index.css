@@ -1,0 +1,121 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+#container{
+    border: 1px solid red;
+    width: 90vw;
+    margin: auto;
+}
+
+/* navbar */
+#nav{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    background-color:#0062ff ;
+    height: 80px;
+    
+
+}
+#logo_container{
+    border: 1px solid crimson;
+    display: flex;
+    align-items: center;
+}
+#logo_container a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: cursive;
+}
+
+.links_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+}
+.links_container a{
+    font-weight: bold;
+    color: white;
+
+}
+/* intro */
+.intro{
+    text-align: center;
+    height: 200px;
+
+}
+
+/* form */
+h3{
+    text-align: center;
+}
+code{
+font-size: 1.3rem;
+background-color: aquamarine;
+
+}
+#form{
+   background-color: beige; 
+   padding: 30px 0;
+}
+#form>:first-child{
+    font-size: 1.3rem;
+}
+#email{
+    width: 250px;
+}
+
+.error_message{
+    width: 100%;
+    height: 20px;
+    border: 1px solid crimson;
+    margin: 10px 0;
+    display: inline-block;
+    background-color: rgb(197, 141, 162);
+}
+
+/* -------------------:EMPTY PSEUDO IS HERE------------------ */
+.error_message:empty{
+    display: none;
+}
+
+/* images */
+.images_container{
+    margin: 20px 0;
+
+}
+.images_container img{
+    margin: 5px;
+    width: 250px;
+    height:250px
+}
+
+.target_pseudo>div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.target_pseudo>div>div{
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    background-color: azure;
+    height: 300px;
+}
+
+/* -------------target pseudo class is here--------------- */
+:target{
+    outline: 5px solid red;
+    outline-offset: 5px;
+}
