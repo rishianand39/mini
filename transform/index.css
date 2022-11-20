@@ -1,0 +1,19 @@
+/* transform */
+/*rotate, rotateX, rotateY, rotateZ */
+/* scaleX, scaleY, scaleZ, scale */
+/* translateX, translateY, translateZ,translate() */
+/*  */
+img{
+    width: 200px;
+    height: 200px;
+    transform: rotateZ(0deg) ;
+
+
+}
+div{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    transform: translate(700px,-300px);
+
+}
