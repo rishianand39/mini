@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <script
+      src="https://kit.fontawesome.com/685d50c047.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <button id="open_modal">Open Modal</button>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo earum ea
+      assumenda pariatur nesciunt, quia eveniet tempora voluptatem facere iste
+      deserunt omnis optio, veniam cum eum reiciendis libero id enim? Odio
+      explicabo labore facilis necessitatibus officia corporis minus magnam
+      possimus voluptas totam eligendi pariatur placeat blanditiis, natus id, ab
+      magni sit quidem quis cupiditate accusamus dignissimos quam, eos
+      accusantium! Aut. Voluptate blanditiis incidunt, maiores exercitationem
+      quibusdam commodi tempore obcaecati iusto, in officiis qui? Maiores eum
+      fugit sint tenetur. Ipsam error quos voluptatibus minima quis saepe
+      molestiae, suscipit quam dolor beatae. Quod nam, quis molestiae corrupti
+      ex dolore possimus laboriosam minima aspernatur. Provident non impedit
+      modi accusantium. Enim sequi nesciunt atque placeat exercitationem? Cum
+      incidunt voluptas amet repellat dolore recusandae a?
+    </p>
+
+    <dialog id="modal">
+      <div class="headings">
+        <div class="auth">Sign Up</div>
+        <div class="auth">Sign In</div>
+      </div>
+      <div id="icons_container">
+        <p>with your social network</p>
+        <div class="icons">
+          <div><i class="fa-brands fa-facebook-f"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-github"></i></div>
+          <div><i class="fa-brands fa-google-plus-g"></i></div>
+        </div>
+        <p>or</p>
+      </div>
+      <div id="form_container">
+        <form action="">
+          <input type="text" placeholder="Username" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input type="submit" value="CREATE AN ACCOUNT" />
+        </form>
+        <button id="skip">Later</button>
+        <p>Already have an Account ? <a href="#">Sign In</a></p>
+      </div>
+    </dialog>
+  </body>
+</html>
