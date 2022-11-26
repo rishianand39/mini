@@ -1,0 +1,111 @@
+#container {
+  /* border: 1px solid red; */
+}
+
+:root {
+  --nav-color: #2874f0;
+  --color-brand-orange: #fb641b;
+  --color-white: #f0f0f0;
+  --color-border-grey: #e4e7ed;
+  --text-color:#878787;
+  
+}
+
+/*--------------------- navbar---------------------------- */
+
+/* logo */
+nav {
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  margin: auto;
+}
+
+.logo_container {
+  text-align: center;
+  line-height: 5px;
+}
+.logo_container > img {
+  width: 80px;
+}
+#plus_img {
+  width: 10px;
+}
+.logo_container a {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: white;
+  margin: 0;
+}
+.logo_container a:hover {
+  text-decoration: underline;
+}
+.logo_container span {
+  color: #f2de0e;
+  text-transform: capitalize;
+}
+
+/* searchbar */
+#search_bar {
+  width: 45%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  margin: 0 10px;
+}
+#search_bar > input {
+  width: 95%;
+  border-radius: 2px;
+
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+#search_bar i {
+  color: var(--nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar links */
+
+.login_container > button {
+  width: 120px;
+  height: 32px;
+  font-size: 1.1rem;
+  color: var(--nav-color);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.seller {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.link > i {
+  margin: 5px;
+  font-size: 15px;
+}
