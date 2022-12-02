@@ -51,9 +51,16 @@ opt_btn.addEventListener("click",()=>{
             class="otp"
             type="text"
             oninput="digitValidate(this)"
-            onkeyup="tabChange(1)"
+            onkeyup="tabChange(0)"
             maxlength="1"
             autofocus
+          />
+          <input
+            class="otp"
+            type="text"
+            oninput="digitValidate(this)"
+            onkeyup="tabChange(1)"
+            maxlength="1"
           />
           <input
             class="otp"
@@ -70,24 +77,17 @@ opt_btn.addEventListener("click",()=>{
             maxlength="1"
           />
           <input
-            class="otp"
-            type="text"
-            oninput="digitValidate(this)"
-            onkeyup="tabChange(4)"
-            maxlength="1"
-          />
-          <input
           class="otp"
           type="text"
           oninput="digitValidate(this)"
-          onkeyup="tabChange(5)"
+          onkeyup="tabChange(4)"
           maxlength="1"
         />
         <input
         class="otp"
         type="text"
         oninput="digitValidate(this)"
-        onkeyup="tabChange(6)"
+        onkeyup="tabChange(5)"
         maxlength="1"
       />
         </div>
@@ -103,11 +103,16 @@ let digitValidate = function (ele) {
   ele.value = ele.value.replace(/[^0-9]/g, "");
 };
 
-let tabChange = function (val) {
-  let ele = document.querySelectorAll(".otp_container>input");
-  if (ele[val - 1].value != "") {
-    ele[val].focus();
-  } else if (ele[val - 1].value == "") {
-    ele[val - 2].focus();
+let tabChange = function (val=5) {
+  let tab = document.querySelectorAll(".otp_container>input");
+  // tab=[tab,tab,tab,tab,tab,tab]
+
+  if (tab[val].value != "") {
+    tab[val+1].focus();
+  } 
+  
+  else if (tab[val].value == "") {
+    tab[val-1].focus();
   }
 };
+
