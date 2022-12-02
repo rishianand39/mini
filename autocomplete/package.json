@@ -1,0 +1,17 @@
+{
+  "name": "autocomplete",
+  "version": "1.0.0",
+  "description": "This project is made for learning autocomplete feature same as we see on flipkart or amazon while typing or searching products in searchbox located on the navbar. Weare going to use mongodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "author": "@rishianand39",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5",
+    "nodemon": "^2.0.20"
+  }
+}
