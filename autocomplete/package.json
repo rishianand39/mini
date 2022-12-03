@@ -4,7 +4,8 @@
   "description": "This project is made for learning autocomplete feature same as we see on flipkart or amazon while typing or searching products in searchbox located on the navbar. Weare going to use mongodb",
   "main": "index.js",
   "scripts": {
-    "start": "npm src/server.js"
+    "start": "node src/server.js",
+    "build":"echo sucess"
   },
   "author": "@rishianand39",
   "license": "MIT",

@@ -23,7 +23,7 @@ app.get('/autocomplete',async(req,res)=>{
 						query: name,
 						path: 'name',
 						fuzzy: {
-							maxEdits: 3,
+							maxEdits: 2,
 						},
 					},
 				},
@@ -44,7 +44,7 @@ app.get('/autocomplete',async(req,res)=>{
 
 		return res.json(response)
     } catch (error) {
-        return res.status(500).json('something went wrong');
+        return res.status(500).json(error.message);
     }
 })
 
