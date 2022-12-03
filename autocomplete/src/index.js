@@ -23,17 +23,21 @@ app.get('/autocomplete',async(req,res)=>{
 						query: name,
 						path: 'name',
 						fuzzy: {
-							maxEdits: 2,
+							maxEdits: 3,
 						},
 					},
 				},
 			},
-            {
-				$project: {
-					_id: 0,
-					name: 1,
-				},
+			{
+				$limit:10,
 			},
+            // {
+			// 	$project: {
+			// 		_id: 0,
+			// 		name: 1,
+			// 	},
+			// },
+			
 		]
 
 		const response = await RestaurantModel.aggregate(agg)
