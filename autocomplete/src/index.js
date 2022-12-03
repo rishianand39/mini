@@ -1,9 +1,9 @@
 const express=require("express");
 const mongoose = require("mongoose");
 const cors=require("cors");
-app.use(cors())
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 const RestaurantModel=require("./models/restaurants.model")
 app.get("/",(req,res)=>{
