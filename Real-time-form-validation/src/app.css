@@ -1,0 +1,10 @@
+.pageContent {
+  opacity: 0;
+}
+.visible {
+  opacity: 1 !important;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
